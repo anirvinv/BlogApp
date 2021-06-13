@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+
+{% if request.user.is_authenticated %}
+    username: {{username}} <br>
+    
+    <form action="" method="Post" >
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="post">
+    </form>
+
+    <a href="{% url 'log_out' %}">Log out</a>
+    <a href="{% url 'index' %}">Home</a>
+<h3>Your blogs:</h3>
+
+{% for blog in blogs %}
+
+<h4>{{blog.title}}</h4>
+<p>{{blog.content}}</p>
+<br>
+{%endfor%}
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %} 
+
+{% block body %}
+
+{% if request.user.is_authenticated %}
+{{request.user}}
+<a href="{% url 'user_info' %}">User info</a>
+<a href="{% url 'log_out' %}">Log out</a>
+{% else %}
+<a href="{% url 'log_in' %}">Log in</a>
+<a href="{% url 'sign_up' %}">Sign up</a>
+{% endif %}
+
+<h1>Blogs</h1>
+{% for blog in blogs %}
+    <br>
+    <h2>{{blog.title}}</h2>
+    <br>
+    <em>Author: {{blog.author}}</em>
+    <br>
+    <em>date: {{blog.date}}</em>
+    
+    <p>{{blog.content}}</p>
+{% endfor %}
+
+{%endblock%}

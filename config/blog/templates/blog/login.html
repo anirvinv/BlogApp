@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{%block body %}
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+
+<form action="" method='post' >
+    {% csrf_token %} 
+    {{form}}
+    <input type="submit">
+</form>
+
+<a href="{% url 'sign_up' %}">Sign up</a>
+
+{%endblock%}
