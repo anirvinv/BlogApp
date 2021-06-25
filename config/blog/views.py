@@ -14,7 +14,7 @@ def user_info(request):
     if request.method=="POST":
         form = BlogForm(request.POST)
         if form.is_valid():
-            title=request.POST['title']
+            title = request.POST['title']
             content = request.POST['content']
             blog = Blog(author=request.user,title=title, content=content)
             blog.save()

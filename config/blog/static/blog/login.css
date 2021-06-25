@@ -1,0 +1,28 @@
+.container {
+  height: 90.4vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .login {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  background-color: #9c9cf0;
+  margin: auto;
+}
+
+.container .login form p {
+  margin: 1rem;
+}
+
+.container .login a {
+  color: white;
+}
+/*# sourceMappingURL=login.css.map */

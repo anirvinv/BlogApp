@@ -1,0 +1,40 @@
+@import 'variables';
+.nav{
+    display: flex;
+    align-items: center;
+  
+    padding: 10px;
+    color: white;
+    position: relative;
+    
+    width: 100%;
+    height: fit-content;
+    background-color: $mellow_blue;
+    .nav_links{
+        position: absolute;
+        bottom: 0; 
+        right: 0px;
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        a {
+            color: white;
+            margin: 1rem;
+            text-decoration: none;
+        }
+        a::after{
+            display: block;
+            content: '';
+            background-color: white;
+            transition: 0.2s;
+            height: 2px;
+            width: 0px;
+            margin-top: 2px;
+        }
+        a:hover::after{
+            width: 100%;
+        }
+    }    
+  }
+  

@@ -1,15 +1,25 @@
 {% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block stylesheet %} <link rel="stylesheet" href="{% static 'blog/login.css' %}"> {% endblock %}
+
+{% block title %}Log in{%endblock%}
+
 {%block body %}
     {% for message in messages %}
         {{message}}
     {% endfor %}
-
-<form action="" method='post' >
-    {% csrf_token %} 
-    {{form}}
-    <input type="submit">
-</form>
-
-<a href="{% url 'sign_up' %}">Sign up</a>
-
+<div class="container">
+    <div class="login">
+        <form action="" method='post' >
+            {% csrf_token %} 
+            <p>Username: {{form.username}}</p>
+            <p>Password: {{form.password}}</p>
+           <input type="submit" value="Log in">
+        </form>
+        
+        <a href="{% url 'sign_up' %}">Sign up</a>
+    </div>
+</div>
 {%endblock%}

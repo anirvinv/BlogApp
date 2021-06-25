@@ -6,4 +6,4 @@ class LoginForm(forms.Form):
 
 class BlogForm(forms.Form):
     title = forms.CharField(max_length=100, required=True)
-    content = forms.CharField(required=True)
+    content = forms.CharField(required=True, widget=forms.Textarea)

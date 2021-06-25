@@ -1,0 +1,42 @@
+.container{
+    padding: 20px;
+}
+#add-blog{
+    
+    width: 100%;
+    height: fit-content;
+    h2{
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+    }
+    // text-align: center;
+
+    .blogform{
+        padding: 30px;
+        margin: auto;
+        outline: 2px solid gray;
+        background-color: rgb(205, 206, 248);
+        width: 500px;
+        height: fit-content;
+        position: relative;
+        
+        input[type=submit]{
+            background: rgb(152, 146, 240);
+            width: 100%;
+            height: 40px;
+        }
+        input[type=submit]:hover{
+            cursor: pointer;
+        }
+        #title{    
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+            height: 200px;
+        }
+    
+    }
+}

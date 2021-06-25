@@ -1,4 +1,11 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'blog/signup.css' %}">
+{% endblock %}
+
+{% block title %}Sign up!{%endblock%}
 
 {% block body %}
 <form action="" method="post">
@@ -6,4 +13,6 @@
     {{form}}
     <input type="submit" value="Sign up">
 </form>
+Already have an account? Login <a href="{% url 'log_in'%}">here</a>
+
 {% endblock %}

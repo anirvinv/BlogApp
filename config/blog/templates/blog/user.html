@@ -1,27 +1,36 @@
 {% extends 'blog/base.html' %}
 
+{% load static %}
+
+
+{% block stylesheet %} <link rel="stylesheet" href="{% static 'blog/user.css' %}"> {% endblock %}
+
 {% block body %}
-
-{% if request.user.is_authenticated %}
-    username: {{username}} <br>
+<div class="container">
+    {% if request.user.is_authenticated %}
+       <h3> Username: {{username}}</h3> <br>
+       <div id="add-blog">
+        <h2>Add Blog</h2>
+        <div class="blogform">
+            <form  action="" method="Post" >
+                {% csrf_token %}
+                <p id="title"> Title: {{form.title}}</p>
+                <p id="content">Content: {{form.content}}</p>
+                <input type="submit" value="+">
+            </form>
+        </div>
+        <br>
+       </div>
+    <h3>Your Blogs:</h3>
     
-    <form action="" method="Post" >
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="post">
-    </form>
-
-    <a href="{% url 'log_out' %}">Log out</a>
-    <a href="{% url 'index' %}">Home</a>
-<h3>Your blogs:</h3>
-
-{% for blog in blogs %}
-
-<h4>{{blog.title}}</h4>
-<p>{{blog.content}}</p>
-<br>
-{%endfor%}
-
+    {% for blog in blogs %}
+    <div class="blog">
+        <h2>{{blog.title}}</h2>
+        <p>{{blog.content}}</p>
+        <br>
+    </div>
+    {%endfor%}
+</div>
 
 
 {% endif %}

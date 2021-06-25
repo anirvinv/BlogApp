@@ -1,0 +1,53 @@
+.container {
+  padding: 20px;
+}
+
+#add-blog {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#add-blog h2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#add-blog .blogform {
+  padding: 30px;
+  margin: auto;
+  outline: 2px solid gray;
+  background-color: #cdcef8;
+  width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+#add-blog .blogform input[type=submit] {
+  background: #9892f0;
+  width: 100%;
+  height: 40px;
+}
+
+#add-blog .blogform input[type=submit]:hover {
+  cursor: pointer;
+}
+
+#add-blog .blogform #title {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#add-blog .blogform textarea {
+  width: 100%;
+  height: 200px;
+}
+/*# sourceMappingURL=user.css.map */
