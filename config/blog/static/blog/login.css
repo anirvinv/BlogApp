@@ -10,16 +10,52 @@
 }
 
 .container .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   text-align: center;
   background-color: #9c9cf0;
   margin: auto;
+  border-radius: 20px;
+}
+
+.container .login__container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.container .login__container input {
+  outline: none;
+  padding: 2px;
+  border: none;
+}
+
+.container .login__container input[type=submit] {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: white;
+  outline: none;
+  padding: 5px;
+}
+
+.container .login__container input[type=submit]:hover {
+  cursor: pointer;
+  background: #bdd4ff;
 }
 
 .container .login form p {
-  margin: 1rem;
+  margin: 1.3rem;
 }
 
 .container .login a {

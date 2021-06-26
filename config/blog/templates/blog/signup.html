@@ -8,11 +8,21 @@
 {% block title %}Sign up!{%endblock%}
 
 {% block body %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Sign up">
-</form>
-Already have an account? Login <a href="{% url 'log_in'%}">here</a>
+<div class="container">
+    <div class="signup">
+        <div class="signup__form">
+            <h3>Sign Up!</h3>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>Username: <br>{{form.username}}</p>
+                <p>Password: <br>{{form.password1}}</p>
+                <p>Confirm password: <br>{{form.password2}}</p>
+                <p>{{form.helptext}}</p>
+                <input type="submit" value="Sign up">
+            </form>
+            Already have an account? Login <a href="{% url 'log_in'%}">here</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

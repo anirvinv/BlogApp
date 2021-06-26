@@ -12,14 +12,15 @@
     {% endfor %}
 <div class="container">
     <div class="login">
-        <form action="" method='post' >
-            {% csrf_token %} 
-            <p>Username: {{form.username}}</p>
-            <p>Password: {{form.password}}</p>
-           <input type="submit" value="Log in">
-        </form>
-        
-        <a href="{% url 'sign_up' %}">Sign up</a>
+        <div class="login__container">
+            <form action="" method='post' >
+                {% csrf_token %} 
+                <p>Username: {{form.username}}</p>
+                <p>Password: {{form.password}}</p>
+               <input type="submit" value="Log in">
+            </form>
+        </div>
     </div>
 </div>
+
 {%endblock%}

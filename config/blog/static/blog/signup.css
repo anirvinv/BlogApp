@@ -1,29 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
-.flex {
+.container {
+  height: 90.4vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.container .signup {
+  margin: auto;
+  height: 350px;
+  width: 350px;
+  background: #a3a3f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
 }
 
-body {
-  overflow-x: hidden;
-  font-family: "Noto Sans JP", sans-serif;
+.container .signup__form {
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-ul {
-  display: none;
+.container .signup__form input {
+  outline: none;
+  padding: 2px;
+  border: none;
+}
+
+.container .signup__form input[type=submit] {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: white;
+  outline: none;
+  padding: 5px;
+}
+
+.container .signup__form input[type=submit]:hover {
+  cursor: pointer;
+  background: #bdd4ff;
 }
 /*# sourceMappingURL=signup.css.map */
